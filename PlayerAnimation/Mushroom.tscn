@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/tileset/Object/Mushroom_2.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 19.9196
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 19.8333
+height = 22.666
+
+[node name="Mushroom" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.166672, -19.3333 )
+shape = SubResource( 1 )
+
+[node name="CollisionArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
+modulate = Color( 0.290196, 0.886275, 0.156863, 1 )
+position = Vector2( 0.666664, -20.5 )
+rotation = 1.5708
+shape = SubResource( 2 )
