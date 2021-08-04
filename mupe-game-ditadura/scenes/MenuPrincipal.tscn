@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/images/jornal-ai-5.jpg" type="Texture" id=1]
+[ext_resource path="res://scenes/MenuPrincipal.gd" type="Script" id=2]
+[ext_resource path="res://themes/type_writer.tres" type="Theme" id=3]
+
+[node name="MenuPrincipal" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.411765 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.25854
+margin_top = 3.25786
+margin_right = 1342.74
+margin_bottom = 1181.26
+rect_scale = Vector2( 0.586623, 0.586623 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="."]
+margin_left = 555.0
+margin_top = 450.667
+margin_right = 1257.0
+margin_bottom = 1158.67
+text = "MUPE na escola
+DITADUTA"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+margin_left = 721.851
+margin_top = 652.415
+margin_right = 1064.85
+margin_bottom = 980.415
+size_flags_horizontal = 5
+size_flags_vertical = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoJogar" type="Button" parent="Menu"]
+margin_right = 342.0
+margin_bottom = 162.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Jogar!"
+
+[node name="BotaoSair" type="Button" parent="Menu"]
+margin_top = 166.0
+margin_right = 342.0
+margin_bottom = 328.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Sair"
