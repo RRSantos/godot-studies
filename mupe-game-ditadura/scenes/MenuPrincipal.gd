@@ -1,8 +1,8 @@
 extends Control
 
 
-onready var botaoJogar = $Menu/BotaoJogar
-onready var botaoSair = $Menu/BotaoSair
+onready var botaoJogar = $FundoMenu/Menu/BotaoJogar
+onready var botaoSair = $FundoMenu/Menu/BotaoSair
 
 
 func _ready() -> void:

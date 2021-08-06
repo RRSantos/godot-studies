@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/images/jornal-ai-5.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/images/SP-MG-Marcha-contra-Gulart.jpg" type="Texture" id=1]
 [ext_resource path="res://scenes/Introducao.gd" type="Script" id=2]
 [ext_resource path="res://themes/type_writer.tres" type="Theme" id=3]
+[ext_resource path="res://scenes/BotaoIniciar.gd" type="Script" id=4]
 
 [node name="Introducao" type="Control"]
 anchor_right = 1.0
@@ -14,28 +15,13 @@ __meta__ = {
 }
 
 [node name="Fundo" type="TextureRect" parent="."]
-modulate = Color( 1, 1, 1, 0.223529 )
-margin_left = 2.24194
-margin_top = -248.905
-margin_right = 3266.24
-margin_bottom = 2009.09
-rect_scale = Vector2( 0.61804, 0.61804 )
+modulate = Color( 1, 1, 1, 0.564706 )
+margin_left = -69.9384
+margin_top = -42.7003
+margin_right = 2951.06
+margin_bottom = 1774.3
+rect_scale = Vector2( 0.67212, 0.67212 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextoIntroducao" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -332.0
-margin_top = -243.5
-margin_right = 332.0
-margin_bottom = 243.5
-text = "Você voltou para o Brasil da década de 60, as músicas da nova banda inglesa, The Beatles tocam nas rádios, internet é coisa de ficção científica, as mulheres começam a usar minissaia, os hippies ganham espaço e a Jovem Guarda dominaria a cena brasileira. Infelizmente, seu álbum e guia temporal está vazio, siga o caminho pela capital e fale com as pessoas para completar sua memória histórica e achar seu caminho de volta para seu próprio tempo."
-autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -45,11 +31,41 @@ anchor_left = 0.5
 anchor_top = 0.929
 anchor_right = 0.5
 anchor_bottom = 0.929
-margin_left = -147.998
-margin_top = -51.1703
-margin_right = 148.002
-margin_bottom = 47.8297
-text = "Iniciar !"
+margin_left = 641.323
+margin_top = -64.6245
+margin_right = 937.323
+margin_bottom = 34.3754
+grow_horizontal = 0
+grow_vertical = 0
+text = "Iniciar >"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoTexto" type="ColorRect" parent="."]
+modulate = Color( 0.952941, 0.952941, 0.952941, 1 )
+self_modulate = Color( 0.901961, 0.901961, 0.901961, 1 )
+margin_left = 954.0
+margin_top = 478.0
+margin_right = 1904.0
+margin_bottom = 926.0
+color = Color( 1, 1, 1, 0.905882 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextoIntroducao" type="Label" parent="FundoTexto"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -458.0
+margin_top = -205.0
+margin_right = 455.0
+margin_bottom = 244.0
+text = "Você voltou para o Brasil da década de 60, as músicas da nova banda inglesa, The Beatles tocam nas rádios, internet é coisa de ficção científica, as mulheres começam a usar minissaia, os hippies ganham espaço e a Jovem Guarda dominaria a cena brasileira. Infelizmente, seu álbum e guia temporal está vazio, siga o caminho pela capital e fale com as pessoas para completar sua memória histórica e achar seu caminho de volta para seu próprio tempo."
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
