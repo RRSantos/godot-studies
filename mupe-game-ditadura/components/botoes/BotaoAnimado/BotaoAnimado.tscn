@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://components/botoes/BotaoAnimado/BotaoAnimado.gd" type="Script" id=1]
+
+[node name="BotaoIniciar" type="Button"]
+margin_right = 296.0
+margin_bottom = 98.9999
+grow_horizontal = 0
+grow_vertical = 0
+text = "Iniciar >"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

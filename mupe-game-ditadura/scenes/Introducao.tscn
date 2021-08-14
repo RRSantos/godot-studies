@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/images/SP-MG-Marcha-contra-Gulart.jpg" type="Texture" id=1]
 [ext_resource path="res://scenes/Introducao.gd" type="Script" id=2]
 [ext_resource path="res://themes/type_writer.tres" type="Theme" id=3]
-[ext_resource path="res://scenes/BotaoIniciar.gd" type="Script" id=4]
+[ext_resource path="res://components/botoes/BotaoAnimado/BotaoAnimado.tscn" type="PackedScene" id=4]
 
 [node name="Introducao" type="Control"]
 anchor_right = 1.0
@@ -26,22 +26,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BotaoIniciar" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.929
-anchor_right = 0.5
-anchor_bottom = 0.929
-margin_left = 641.323
-margin_top = -64.6245
-margin_right = 937.323
-margin_bottom = 34.3754
-grow_horizontal = 0
-grow_vertical = 0
-text = "Iniciar >"
-script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="BotaoIniciar" parent="." instance=ExtResource( 4 )]
+margin_left = 1605.55
+margin_top = 942.924
+margin_right = 1901.55
+margin_bottom = 1041.92
 
 [node name="FundoTexto" type="ColorRect" parent="."]
 modulate = Color( 0.952941, 0.952941, 0.952941, 1 )
