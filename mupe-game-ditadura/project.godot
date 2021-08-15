@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "PerguntaQuiz",
 "language": "GDScript",
 "path": "res://components/quiz/PerguntaQuiz.gd"
+}, {
+"base": "Node",
+"class": "ResolvedorCena",
+"language": "GDScript",
+"path": "res://components/gerenciador_cenas/ResolvedorCena.gd"
 } ]
 _global_script_class_icons={
-"PerguntaQuiz": ""
+"PerguntaQuiz": "",
+"ResolvedorCena": ""
 }
 
 [application]

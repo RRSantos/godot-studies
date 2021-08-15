@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/images/tile1.jpg" type="Texture" id=1]
 [ext_resource path="res://themes/fonts/alternativa.tres" type="DynamicFont" id=2]
 [ext_resource path="res://themes/fonts/pergunta.tres" type="DynamicFont" id=3]
 [ext_resource path="res://components/quiz/Quiz.gd" type="Script" id=4]
+[ext_resource path="res://themes/fonts/confortaa_25.tres" type="DynamicFont" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.25098, 0.223529, 0.223529, 0.788235 )
@@ -153,3 +154,28 @@ margin_bottom = 1060.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
+
+[node name="Mensagem" type="PopupDialog" parent="Fundo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -611.5
+margin_top = -285.0
+margin_right = 611.5
+margin_bottom = 285.0
+popup_exclusive = true
+
+[node name="Timer" type="Timer" parent="Fundo/Mensagem"]
+wait_time = 4.0
+
+[node name="Texto" type="Label" parent="Fundo/Mensagem"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 5 )
+text = "Parabéns! 
+Resposta certa."
+align = 1
+valign = 1
+
+[connection signal="timeout" from="Fundo/Mensagem/Timer" to="." method="_on_Timer_timeout"]
