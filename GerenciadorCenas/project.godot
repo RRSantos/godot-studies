@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "ResolvedorCena",
+"language": "GDScript",
+"path": "res://ResolvedorCena.gd"
+} ]
+_global_script_class_icons={
+"ResolvedorCena": ""
+}
+
 [application]
 
 config/name="Gerenciador Cenas"
