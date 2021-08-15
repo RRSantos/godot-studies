@@ -1,0 +1,35 @@
+[
+	{
+		"pergunta": "Abril de 1964 foi um mês marcante na história brasileira.\nO então presidente da república, João Goulart, foi deposto.\n\nNa reportagem do Correio da Manhã, vemos estudantes defendendo as liberdades democráticas.\n\nPor que eles tinham esta preocupação neste momento? ",
+		"alternativas": [
+			"Alternativa 1", 
+			"Pois um golpe estava em curso",
+			"Alternativa 3",
+			"Alternativa 4",
+			"Alternativa 5",
+		],
+		"alternativa_correta": "Pois um golpe estava em curso"
+	},
+	{
+		"pergunta": "Aqui vai o texto da pergunta 2",
+		"alternativas": [
+			"Alternativa 2 1", 
+			"Alternativa 2 2",
+			"Alternativa 2 3",
+			"Alternativa 2 4",
+			"Alternativa 2 5",
+		],
+		"alternativa_correta": "Alternativa 2 4"
+	},
+	{
+		"pergunta": "Aqui vai o texto da pergunta 3",
+		"alternativas": [
+			"Alternativa 3 1", 
+			"Alternativa 3 2",
+			"Alternativa 3 3",
+			"Alternativa 3 4",
+			"Alternativa 3 5",
+		],
+		"alternativa_correta": "Alternativa 3 5"
+	}
+]

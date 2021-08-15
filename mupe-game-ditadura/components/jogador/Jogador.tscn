@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://assets/sprites/girl/Walk (17).png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/girl/Walk (19).png" type="Texture" id=2]
@@ -55,7 +55,12 @@ animations = [ {
 radius = 54.845
 height = 84.8553
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 88.0645, 115.332 )
+
 [node name="Jogador" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource( 37 )
 
 [node name="Animacao" type="AnimatedSprite" parent="."]
@@ -66,3 +71,13 @@ animation = "andando"
 [node name="Colisao" type="CollisionShape2D" parent="."]
 position = Vector2( 0.280319, -98.6652 )
 shape = SubResource( 2 )
+
+[node name="AreaDialogo" type="Area2D" parent="."]
+position = Vector2( -15, -112 )
+collision_layer = 2
+collision_mask = 4
+
+[node name="ColisaoDialogo" type="CollisionShape2D" parent="AreaDialogo"]
+modulate = Color( 0.960784, 0.980392, 0.0588235, 1 )
+position = Vector2( 3.64391, -1.12119 )
+shape = SubResource( 3 )

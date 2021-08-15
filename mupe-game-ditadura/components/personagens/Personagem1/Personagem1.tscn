@@ -1,0 +1,64 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/sprites/boy/Idle__006.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/boy/Idle__000.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/boy/Idle__005.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/boy/Idle__007.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/boy/Idle__009.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/boy/Idle__002.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/boy/Idle__001.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/boy/Idle__003.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/boy/Idle__004.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/boy/Idle__008.png" type="Texture" id=10]
+[ext_resource path="res://components/personagens/Personagem1/Personagem1.gd" type="Script" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 140.404, 176.947 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "parado",
+"speed": 20.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 44.512
+height = 147.021
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 64.4894
+height = 115.039
+
+[node name="Personagem1" type="KinematicBody2D"]
+collision_mask = 0
+script = ExtResource( 16 )
+
+[node name="AreaDialogo" type="Area2D" parent="."]
+modulate = Color( 0.933333, 1, 0.0117647, 1 )
+space_override = 1
+collision_layer = 4
+collision_mask = 2
+
+[node name="ColisaoDialogo" type="CollisionShape2D" parent="AreaDialogo"]
+position = Vector2( 0.499451, -109.876 )
+shape = SubResource( 1 )
+one_way_collision = true
+
+[node name="Animacao" type="AnimatedSprite" parent="."]
+position = Vector2( -72.9695, -227.933 )
+frames = SubResource( 2 )
+animation = "parado"
+centered = false
+
+[node name="Colisao" type="CollisionShape2D" parent="."]
+position = Vector2( 1.49829, -112.863 )
+shape = SubResource( 3 )
+
+[node name="AreaClick" type="Area2D" parent="."]
+
+[node name="ColisaoClick" type="CollisionShape2D" parent="AreaClick"]
+modulate = Color( 0.886275, 0.0705882, 0.0392157, 1 )
+position = Vector2( -0.49942, -111.374 )
+shape = SubResource( 4 )

@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Object",
+"class": "PerguntaQuiz",
+"language": "GDScript",
+"path": "res://components/quiz/PerguntaQuiz.gd"
+} ]
+_global_script_class_icons={
+"PerguntaQuiz": ""
+}
+
 [application]
 
 config/name="mupe-game-ditadura"
@@ -23,6 +33,12 @@ window/size/test_height=1080
 window/dpi/allow_hidpi=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[layer_names]
+
+2d_physics/layer_1="mundo"
+2d_physics/layer_2="jogador"
+2d_physics/layer_3="diálogos"
 
 [physics]
 
