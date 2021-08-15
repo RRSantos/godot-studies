@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 func _on_acertou_resposta():
-	print("acertou, miserávi")
+	pass
 	
 func _on_errou_resposta():
-	print("errou...")
+	pass
