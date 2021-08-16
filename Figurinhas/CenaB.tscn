@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://CenaManager.gd" type="Script" id=1]
+[ext_resource path="res://album-desenho.jpg" type="Texture" id=2]
+[ext_resource path="res://jornal_teste.png" type="Texture" id=3]
+
+[node name="CenaB" type="Node2D"]
+script = ExtResource( 1 )
+scene_to_go = "res://CenaA.tscn"
+
+[node name="album-desenho" type="Sprite" parent="."]
+position = Vector2( 513.666, 303.203 )
+scale = Vector2( 1.69593, 1.27102 )
+texture = ExtResource( 2 )
+
+[node name="jornal_teste" type="Sprite" parent="album-desenho"]
+position = Vector2( 127.077, -89.1949 )
+scale = Vector2( 0.344828, 0.301548 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="album-desenho"]
+margin_left = -221.0
+margin_top = -210.468
+margin_right = 79.0
+margin_bottom = -194.468
+custom_colors/font_color = Color( 0.00784314, 0.00784314, 0.00784314, 1 )
+custom_colors/font_outline_modulate = Color( 0.682353, 0.0862745, 0.0862745, 1 )
+custom_colors/font_color_shadow = Color( 0.972549, 0.964706, 0.964706, 1 )
+text = "CONSIGA MAIS 3 FIGURAS PARA CONCLUIR"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1085.36
+margin_top = 46.776
+margin_right = 1143.36
+margin_bottom = 60.776
+text = "CENA B"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1130.97
+margin_top = 240.206
+margin_right = 1356.97
+margin_bottom = 278.206
+text = "GO TO A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Button"]
+margin_left = -735.449
+margin_top = 305.878
+margin_right = -573.449
+margin_bottom = 340.878
+text = "CONTINUAR"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
